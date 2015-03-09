@@ -3,13 +3,5 @@
   "description": "mpwar framework",
   "license": "Apache-2.0",
   "keywords": [],
-  "homepage": "http://framework.dev",
-  "type": "project",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/ninina31/mpwar"
-    }
-  ]
-  }
+  "type": "project"
 }
