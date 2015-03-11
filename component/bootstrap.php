@@ -5,9 +5,15 @@
   class Bootstrap
   {
     
-    function __construct()
+    public function __construct()
     {
-      echo "<h1> Hello world </h1>";
+      echo "Bootstrap";
+    }
+
+    public function execute()
+    {
+      $route = new Routing();
+      return $route->getRoute();
     }
   }
 ?>
