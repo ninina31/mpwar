@@ -3,5 +3,14 @@
   "description": "mpwar framework",
   "license": "Apache-2.0",
   "keywords": [],
-  "type": "project"
+  "homepage": "https://github.com/ninina31/mpwar",
+  "type": "project",
+  "require": {
+    "php": ">=5.3.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "framework\\": "src/"
+    }
+  }
 }
