@@ -1,6 +1,6 @@
 <?php
 
-  namespace ninina31\Mpwar\src\component;
+  namespace ninina31\Mpwar\component;
 
   class Bootstrap
   {
