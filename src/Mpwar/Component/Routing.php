@@ -1,5 +1,7 @@
 <?php
 
+  namespace Mpwar\Component;
+
   class Routing
   {
     
