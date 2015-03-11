@@ -1,5 +1,5 @@
 {
-  "name": "ninina31/framework",
+  "name": "ninina31/mpwar",
   "description": "mpwar framework",
   "license": "Apache-2.0",
   "keywords": [],
@@ -10,7 +10,7 @@
   },
   "autoload": {
     "psr-0": {
-      "framework\\": "src/"
+      "mpwar\\": "src/"
     }
   }
 }
