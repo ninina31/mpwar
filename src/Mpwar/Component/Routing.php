@@ -21,7 +21,7 @@
           return array('controller' => $url_action['controller'], 'action' => $url_action['action']);
         }
       }
-      return array('controller' => '\\Controller\\Exceptions\\Exceptions', 'action' => 'notFound');
+      return array('controller' => '\\App\\Controller\\Exceptions\\Exceptions', 'action' => 'notFound');
     }
   }
 ?>
