@@ -15,7 +15,7 @@
     public function getRoute()
     {
       $string = file_get_contents('../src/Config/Routing.json');
-      $json_array = json_encode($string, true);
+      $json_array = json_decode($string, true);
       foreach ($json_array as $url_action) {
         if ($url_action['uri'] == $this->uri) {
           return array('controller' => $url_action['controller'], 'action' => $url_action['action']);
