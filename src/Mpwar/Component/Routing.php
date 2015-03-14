@@ -16,13 +16,11 @@
     {
       $string = file_get_contents('../src/Config/Routing.json');
       $json_array = json_decode($string, true);
-      foreach ($json_array as $url_action) {
-        echo $url_action;
+      foreach ($json_array as $key => $url_action) {
         if ($url_action['uri'] == $this->uri) {
           return array('controller' => $url_action['controller'], 'action' => $url_action['action']);
         }
       }
-      return array('controller' => '\\App\\Controller\\Exceptions\\Exceptions', 'action' => 'notFound');
+      return array('controller' => "\\Controller\\Exceptions\\Exceptions", 'action' => 'NotFound');
     }
   }
-?>
