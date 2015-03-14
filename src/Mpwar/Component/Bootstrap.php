@@ -4,13 +4,8 @@
 
   class Bootstrap
   {
-    
-    public function __construct()
-    {
-      echo "Bootstrap";
-    }
 
-    public function execute()
+    public function getController()
     {
       $route = new Routing();
       return $route->getRoute();
