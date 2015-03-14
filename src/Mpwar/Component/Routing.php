@@ -12,7 +12,7 @@
       echo $this->uri . '-';
     }
 
-    public function getRoute($url)
+    public function getRoute()
     {
       $yaml_array = yaml_parse_file('../src/Config/Routing.yml');
       foreach ($yaml_array as $url_action) {
