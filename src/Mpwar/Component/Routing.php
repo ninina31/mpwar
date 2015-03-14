@@ -14,8 +14,9 @@
 
     public function getRoute()
     {
-      $yaml_array = yaml_parse_file('../src/Config/Routing.yml');
-      foreach ($yaml_array as $url_action) {
+      $string = file_get_contents('../src/Config/Routing.json');
+      $json_array = json_encode($string, true);
+      foreach ($json_array as $url_action) {
         if ($url_action['uri'] == $this->uri) {
           return array('controller' => $url_action['controller'], 'action' => $url_action['action']);
         }
