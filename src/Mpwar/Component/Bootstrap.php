@@ -2,6 +2,8 @@
 
   namespace Mpwar\Component;
   use Mpwar\Component\Request\Request;
+  use Mpwar\Component\Routing\Routing;
+  use Mpwar\Component\Routing\Route;
 
   class Bootstrap
   {
