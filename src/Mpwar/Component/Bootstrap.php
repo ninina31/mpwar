@@ -22,6 +22,7 @@
     public function executeController(Route $route)
     {
       $controller = $route->getValue('controller');
-      return $controller->$route->getValue('action')($this->request);
+      echo "hey";
+      return $controller->$route->getValue('action');
     }
   }
