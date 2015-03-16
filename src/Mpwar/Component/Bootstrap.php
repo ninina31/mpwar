@@ -16,7 +16,7 @@
       return $this->executeController($route, $request);
     }
 
-    public function executeController(Route $route, Request request)
+    public function executeController(Route $route, Request $request)
     {
       $controller = $route->getValue('controller');
       echo "hey";
