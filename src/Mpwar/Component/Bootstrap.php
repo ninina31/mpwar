@@ -7,12 +7,14 @@
 
     public function execute()
     {
-      $route = new Routing();
-      return $route->getRoute();
+      $routing = new Routing();
+      $route = $routing->getRoute();
+      return $this->executeController($route);
     }
 
-    public function executeController()
+    public function executeController(Route $route)
     {
-      
+      $controller = $route->getValue('controller');
+      return $controller->$route->getValue('action');
     }
   }

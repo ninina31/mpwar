@@ -7,7 +7,7 @@
     
     public function __construct(argument)
     {
-      echo "Soy BaseController";
+      echo "Soy BaseController -";
     }
 
   }
