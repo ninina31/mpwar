@@ -17,7 +17,7 @@
       $session = new Session();
       $this->get = new Parameters($_GET);
       $this->post = new Parameters($_POST);
-      $this->cookies = new Parameters($_COOKIES);
+      $this->cookies = new Parameters($_COOKIE);
       $this->server = new Parameters($_SERVER);
       $this->session = $session;
     }
