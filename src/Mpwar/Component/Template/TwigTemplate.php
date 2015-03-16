@@ -2,7 +2,7 @@
 
 //use Twig\
 
-namespace Mpwar\Component\Template\TwigTemplate;
+namespace Mpwar\Component\Template;
 
 class TwigTemplate implements TemplateInterface
 {

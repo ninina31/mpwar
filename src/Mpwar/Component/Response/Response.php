@@ -1,6 +1,6 @@
 <?php
 
-  namespace Mpwar\Component\Response\Response;
+  namespace Mpwar\Component\Response;
 
   class Response extends ResponseAbstractClass
   {

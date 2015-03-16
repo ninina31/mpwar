@@ -1,7 +1,7 @@
 <?php 
 
-  namespace Mpwar\Component\Request\Request;
-  use Mpwar\Component\Session\Session;
+  namespace Mpwar\Component\Request;
+  use Mpwar\Component\Session;
 
   class Request
   {

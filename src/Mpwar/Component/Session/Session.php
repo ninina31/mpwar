@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpwar\Component\Session\Session;
+namespace Mpwar\Component\Session;
 
 class Session
 {

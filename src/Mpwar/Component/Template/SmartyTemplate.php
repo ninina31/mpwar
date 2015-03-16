@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpwar\Component\Template\SmartyTemplate;
+namespace Mpwar\Component\Template;
 
 class SmartyTemplate implements TemplateInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-  namespace Mpwar\Component\Response\JsonResponse;
+  namespace Mpwar\Component\Response;
 
   class JsonResponse extends ResponseAbstractClass
   {

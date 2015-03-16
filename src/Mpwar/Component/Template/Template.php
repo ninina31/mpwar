@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpwar\Component\Template\TemplateInterface;
+namespace Mpwar\Component\Template;
 
 interface TemplateInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpwar\Component\Routing\Route;
+namespace Mpwar\Component\Routing;
 
 class Route
 {
