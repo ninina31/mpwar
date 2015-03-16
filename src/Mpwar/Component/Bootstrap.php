@@ -1,6 +1,6 @@
 <?php
 
-  namespace Mpwar\Component\Bootstrap;
+  namespace Mpwar\Component;
   use Mpwar\Component\Request\Request;
 
   class Bootstrap
