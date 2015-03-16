@@ -2,16 +2,14 @@
 
   namespace Mpwar\Component\Bootstrap;
   use Mpwar\Component\Request\Request;
-  use Mpwar\Component\Session\Session;
 
   class Bootstrap
   {
-
     protected $request;
 
     public function __construct()
     {
-      $this->request = new Request(new Session);
+      $this->request = new Request();
     }
 
     public function execute()
@@ -24,6 +22,6 @@
     public function executeController(Route $route)
     {
       $controller = $route->getValue('controller');
-      return $controller->$route->getValue('action');
+      return $controller->$route->getValue('action')($this->request);
     }
   }
