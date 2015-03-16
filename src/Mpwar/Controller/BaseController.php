@@ -1,6 +1,6 @@
 <?php
 
-  namespace Mpwar\Controller\BaseController;
+  namespace Mpwar\Controller;
 
   abstract class BaseController
   {
