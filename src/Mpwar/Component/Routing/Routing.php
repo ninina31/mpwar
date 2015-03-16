@@ -1,14 +1,17 @@
 <?php
 
-  namespace Mpwar\Component;
+  namespace Mpwar\Component\Routing;
+  use Mpwar\Component\Request\Request;
 
   class Routing
   {
+    private $request;
     private $uri;
     
-    public function __construct()
+    public function __construct(Request $request)
     {
-      $this->uri = $_SERVER['REQUEST_URI'];
+      $this->request = $request;
+      $this->uri = $this->request->server->getValue('REQUEST_URI');
       echo $this->uri . '-';
     }
 

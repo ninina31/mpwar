@@ -7,21 +7,16 @@
 
   class Bootstrap
   {
-    protected $request;
-
-    public function __construct()
-    {
-      $this->request = new Request();
-    }
 
     public function execute()
     {
+      $request = new Request();
       $routing = new Routing();
       $route = $routing->getRoute();
-      return $this->executeController($route);
+      return $this->executeController($route, $request);
     }
 
-    public function executeController(Route $route)
+    public function executeController(Route $route, Request request)
     {
       $controller = $route->getValue('controller');
       echo "hey";
