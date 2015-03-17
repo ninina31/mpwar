@@ -18,8 +18,10 @@
 
     public function executeController(Route $route, Request $request)
     {
-      $controller = new $route->getController()($request);
+      $controller = $route->getController();
+      $action = $route->getAction();
+      $vars = $route->getVars();
       echo "hey";
-      return call_user_func(array($controller, $route->getAction()), $route->getVars());
+      return call_user_func(array(new $controller(), $route->getAction()), array_merge(array($request), $route->getVars()));
     }
   }
