@@ -18,8 +18,8 @@
 
     public function executeController(Route $route, Request $request)
     {
-      $controller = $route->getValue('controller');
+      $controller = $route->getController();
       echo "hey";
-      return $controller->$route->getValue('action');
+      return $controller->$route->getValue();
     }
   }

@@ -5,8 +5,8 @@ namespace Mpwar\Component\Routing;
 class Route
 {
   
-  protected $controller;
-  protected $action;
+  private $controller;
+  private $action;
 
   function __construct($controller, $action)
   {
@@ -14,8 +14,13 @@ class Route
     $this->action = $action;
   }
 
-  public function getValue($key)
+  public function getController()
   {
-    
+    return $this->controller;
+  }
+
+  public function getAction()
+  {
+    return $this->action;
   }
 }
