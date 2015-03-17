@@ -5,23 +5,19 @@
 
   class Routing
   {
-    private $request;
-    private $uri;
-    
-    public function __construct(Request $request)
-    {
-      $this->request = $request;
-      $this->uri = $this->request->server->getValue('REQUEST_URI');
-      echo $this->uri . '-';
-    }
 
-    public function getRoute()
+    public function getRoute(Request $request)
     {
+      $uri = $this->request->server->getValue('REQUEST_URI');
+      $uri_array = explode('/', $uri);
+      array_shift($uri_array); // delete first black space
+      $controller = array_shift($uri_array);
+      $action = array_shift($uri_array);
       $string = file_get_contents('../src/Config/Routing.json');
       $json_array = json_decode($string, true);
-      foreach ($json_array as $key => $url_action) {
-        if ($url_action['uri'] == $this->uri) {
-          return new Route($url_action['controller'], $url_action['action']);
+      foreach ($json_array as $key => $value) {
+        if ($value['controller'] == $controller && $value['action'] == $action) {
+          return new Route($value['route'], $value['action']);
         }
       }
       return new Route("\\Controller\\Exceptions\\Exceptions", 'NotFound');
