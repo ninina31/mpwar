@@ -7,11 +7,13 @@ class Route
   
   private $controller;
   private $action;
+  private $vars;
 
-  function __construct($controller, $action)
+  function __construct($controller, $action, $vars = array())
   {
     $this->controller = $controller;
     $this->action = $action;
+    $this->vars = $vars;
   }
 
   public function getController()
@@ -22,5 +24,10 @@ class Route
   public function getAction()
   {
     return $this->action;
+  }
+
+  public function getVars()
+  {
+    return $this->vars;
   }
 }

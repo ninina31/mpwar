@@ -20,6 +20,6 @@
     {
       $controller = $route->getController();
       echo "hey";
-      return $controller->$route->getValue();
+      return call_user_func($route->getAction(), $route->getVars());
     }
   }
