@@ -8,7 +8,7 @@
 
     public function getRoute(Request $request)
     {
-      $uri = $this->request->server->getValue('REQUEST_URI');
+      $uri = $request->server->getValue('REQUEST_URI');
       $uri_array = explode('/', $uri);
       array_shift($uri_array); // delete first black space
       $controller = array_shift($uri_array);
