@@ -12,7 +12,7 @@
     {
       $request = new Request();
       $routing = new Routing();
-      $route = $routing->getRoute();
+      $route = $routing->getRoute($request);
       return $this->executeController($route, $request);
     }
 
