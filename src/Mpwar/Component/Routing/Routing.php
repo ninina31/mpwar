@@ -21,6 +21,6 @@
           return new Route($value['route'], $value['action'], $uri_array);
         }
       }
-      return new Route("\\Controller\\Exceptions\\Exceptions", 'NotFound');
+      return new Route("Exceptions", 'notFound');
     }
   }
