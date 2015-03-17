@@ -22,6 +22,6 @@
       $action = $route->getAction();
       $vars = $route->getVars();
       echo "hey";
-      return call_user_func(array(new $controller(), $route->getAction()), array_merge(array($request), $route->getVars()));
+      return call_user_func(array(new $controller(), $route->getAction()), array($request, $route->getVars());
     }
   }
