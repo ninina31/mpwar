@@ -2,6 +2,7 @@
 
   namespace Mpwar\Component\Routing;
   use Mpwar\Component\Request\Request;
+  use Mpwar\Component\Request\Parameters;
 
   class Routing
   {

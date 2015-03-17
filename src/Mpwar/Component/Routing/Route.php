@@ -13,4 +13,9 @@ class Route
     $this->controller = $controller;
     $this->action = $action;
   }
+
+  public function getValue($key)
+  {
+    
+  }
 }
