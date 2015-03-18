@@ -11,6 +11,6 @@
         header('HTTP/1.0 404 Not found');
       }
 
-      return $this->content;
+      echo $this->content;
     }
   }
