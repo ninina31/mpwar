@@ -1,8 +1,8 @@
 <?php
 
-use Twig;
-
 namespace Mpwar\Component\Template;
+use Twig_Loader_Filesystem;
+use Twig_Environment;
 
 class TwigTemplate implements TemplateInterface
 {
@@ -12,7 +12,7 @@ class TwigTemplate implements TemplateInterface
   public function __construct()
   {
     $loader = new Twig_Loader_Filesystem('../src/Views');
-    $this->twig = new Twig_Environment($loader, array('cache' => '/path/to/compilation_cache'));
+    $this->twig = new Twig_Environment($loader, array('cache' => '../cache'));
   }
 
   public function render($template, $parameters = array())
