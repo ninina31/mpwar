@@ -21,5 +21,4 @@
       $this->server = new Parameters($_SERVER);
       $this->session = $session;
     }
-
   }

@@ -1,6 +1,6 @@
 <?php
 
-  namespace Mpwar\Component\Response;
+  namespace Mpwar\Component;
 
   class JsonResponse extends ResponseAbstractClass
   {
@@ -14,9 +14,9 @@
       header('Content-Type: application/json');
 
       if (!is_array($this->content)) {
-        
+        $this->content = array($this->content);
       }
 
-      echo $this->content;
+      return json_encode($this->content);
     }
   }

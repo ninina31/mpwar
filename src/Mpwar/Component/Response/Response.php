@@ -1,6 +1,6 @@
 <?php
 
-  namespace Mpwar\Component\Response;
+  namespace Mpwar\Component;
 
   class Response extends ResponseAbstractClass
   {
@@ -11,6 +11,6 @@
         header('HTTP/1.0 404 Not found');
       }
 
-      echo $this->content;
+      return $this->content;
     }
   }

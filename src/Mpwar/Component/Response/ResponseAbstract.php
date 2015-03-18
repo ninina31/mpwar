@@ -1,6 +1,6 @@
 <?php
 
-namespace Mpwar\Component\Response;
+namespace Mpwar\Component;
 
 abstract class ResponseAbstractClass
 {
@@ -17,5 +17,3 @@ abstract class ResponseAbstractClass
   abstract protected function send();
 
 }
-
-?>
