@@ -21,7 +21,6 @@
       $controller = $route->getController();
       $action = $route->getAction();
       $vars = $route->getVars();
-      echo "hey";
       return call_user_func_array(
         array(
           new $controller(), 
