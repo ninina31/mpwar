@@ -5,9 +5,6 @@ use Smarty;
 
 class SmartyTemplate implements TemplateInterface
 {
-
-  protected $engine;
-  
   public function __construct(argument)
   {
     $this->engine = new Smarty();
@@ -16,7 +13,7 @@ class SmartyTemplate implements TemplateInterface
   public function render($template, $parameters = array())
   {
     $this->assignVariables($parameters);
-    return $this->engine->fetch();
+    return $this->engine->fetch($template);
   }
 
   public function assignVariables($parameters)
@@ -26,4 +23,3 @@ class SmartyTemplate implements TemplateInterface
     }
   }
 }
-?>
