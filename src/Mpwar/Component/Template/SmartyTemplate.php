@@ -5,7 +5,9 @@ use Smarty;
 
 class SmartyTemplate implements TemplateInterface
 {
-  public function __construct(argument)
+  protected $engine;
+
+  public function __construct()
   {
     $this->engine = new Smarty();
   }

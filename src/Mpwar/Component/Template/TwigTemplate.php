@@ -6,6 +6,7 @@ use Twig_Environment;
 
 class TwigTemplate implements TemplateInterface
 {
+  protected $engine;
   
   public function __construct()
   {
