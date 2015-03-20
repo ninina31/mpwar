@@ -1,6 +1,7 @@
 <?php
 
 namespace Mpwar\Component\Template;
+use Smarty;
 
 class SmartyTemplate implements TemplateInterface
 {
@@ -14,7 +15,15 @@ class SmartyTemplate implements TemplateInterface
 
   public function render($template, $parameters = array())
   {
-    echo "ble";
+    $this->assignVariables($parameters);
+    return $this->engine->fetch();
+  }
+
+  public function assignVariables($parameters)
+  {
+    foreach ($parameters as $key => $value) {
+      $this->engine->assign($key, $value);
+    }
   }
 }
 ?>

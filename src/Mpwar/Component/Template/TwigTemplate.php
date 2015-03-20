@@ -12,11 +12,11 @@ class TwigTemplate implements TemplateInterface
   public function __construct()
   {
     $loader = new Twig_Loader_Filesystem('../src/Views');
-    $this->twig = new Twig_Environment($loader, array('cache' => '../cache'));
+    $this->twig = new Twig_Environment($loader, array('cache' => false));
   }
 
   public function render($template, $parameters = array())
   {
-    $this->twig->render($template, $parameters);
+    return $this->twig->render($template, $parameters);
   }
 }
