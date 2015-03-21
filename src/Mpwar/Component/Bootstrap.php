@@ -28,7 +28,7 @@
         ), 
         array(
           $request, 
-          $route->getVars()
+          $vars
         )
       );
     }

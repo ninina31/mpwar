@@ -2,6 +2,7 @@
 
   namespace Mpwar\Component\Database;
   use Mpwar\Component\Database\DBInterface;
+  use PDO;
 
   class Sql implements DBInterface
   {
