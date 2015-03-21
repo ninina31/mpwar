@@ -113,18 +113,18 @@
       }
     }
 
-    public function updateItem($id, $name)
+    public function updateItem($oldName, $newName)
     {
       try{
 
         $this->connect();
 
-        $query = "UPDATE items SET name = ? WHERE id = ?";
+        $query = "UPDATE items SET name = ? WHERE name = ?";
 
         $this->prepareQuery($query);
 
-        $this->bindParameters(1, $name);
-        $this->bindParameters(2, $id);
+        $this->bindParameters(1, $newName);
+        $this->bindParameters(2, $oldName);
 
         if($this->executeQuery()){
           return true;
@@ -138,17 +138,17 @@
       }
     }
 
-    public function deleteItem($id)
+    public function deleteItem($name)
     {
       try{
 
         $this->connect();
 
-        $query = "DELETE FROM items WHERE id = ?";
+        $query = "DELETE FROM items WHERE name = ?";
 
         $this->prepareQuery($query);
 
-        $this->bindParameters(1, $id);
+        $this->bindParameters(1, $name);
 
         if($this->executeQuery()){
           return true;
