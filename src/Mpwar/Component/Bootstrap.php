@@ -20,16 +20,20 @@
     {
       $controller = $route->getController();
       $action = $route->getAction();
-      $vars = $route->getVars();
+      $vars = $this->getVarsForController($request, $route->getVars());
       return call_user_func_array(
         array(
           new $controller(), 
           $route->getAction()
         ), 
-        array(
-          $request, 
-          $vars
-        )
+        $vars
       );
+    }
+
+    private function getVarsForController($request, $vars)
+    {
+      $routeVars = array($request);
+
+      return array_merge($routeVars, $vars);
     }
   }
