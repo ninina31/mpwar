@@ -20,5 +20,7 @@
       $this->cookies = new Parameters($_COOKIE);
       $this->server = new Parameters($_SERVER);
       $this->session = $session;
+
+      $_GET = $_POST = $_COOKIE = $_SERVER = null;
     }
   }
