@@ -1,6 +1,6 @@
 <?php 
 
-  namespace Mpwar\Component;
+  namespace Mpwar\Component\Request;
   use Mpwar\Component\Session\Session;
 
   class Request

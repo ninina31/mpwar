@@ -17,6 +17,6 @@
         $this->content = array($this->content);
       }
 
-      return json_encode($this->content);
+      echo json_encode($this->content);
     }
   }
