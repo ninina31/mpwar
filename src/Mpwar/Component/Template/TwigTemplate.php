@@ -11,7 +11,7 @@ class TwigTemplate implements TemplateInterface
   public function __construct()
   {
     $loader = new Twig_Loader_Filesystem('../src/Views');
-    $this->engine = new Twig_Environment($loader, array('cache' => false));
+    $this->engine = new Twig_Environment($loader, array('cache' => '../src/cache'));
   }
 
   public function render($template, $parameters = array())
